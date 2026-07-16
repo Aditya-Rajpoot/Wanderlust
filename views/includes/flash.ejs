@@ -21,3 +21,20 @@
         </button>
     </div>
 <% } %>
+
+
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.alert').forEach((el) => {
+        if (window.bootstrap && bootstrap.Alert) {
+          bootstrap.Alert.getOrCreateInstance(el).close();
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }, 3000);
+  });
+</script>
+
