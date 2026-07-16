@@ -603,7 +603,7 @@ a, button, .btn {
   cursor: pointer !important;
 }
 
-/* ---------- Auth Pages (login.ejs, signup.ejs) ---------- */
+
 .auth-wrapper {
   min-height: 70vh;
   display: flex;
@@ -668,9 +668,6 @@ a, button, .btn {
   text-decoration: underline;
 }
 
-/* ==========================================================
-   RESPONSIVE — Tablet & Mobile
-   ========================================================== */
 
 @media (max-width: 991px) {
   .hero-banner {
