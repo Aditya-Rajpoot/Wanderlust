@@ -261,57 +261,47 @@ a, button, .btn {
   display: none;
 }
 
-/* .tax-toggle {
-  border: 1px solid black;
-  border-radius: 1rem;
+/* ===== Tax Toggle Section (19 July 2026) ===== */
+.tax-toggle {
+  border: 1px solid #eee;
+  border-radius: 2rem;
   height: 3.25rem;
-  padding: 1rem;
+  padding: 0 1.3rem;
   margin-left: 5rem;
   display: flex;
   align-items: center;
-} */
+  background-color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
 
-/* ===== UPDATED: Stylish Tax Toggle Section (19 July 2026) ===== */
-  .tax-toggle {
-    border: 1px solid #eee;
-    border-radius: 2rem;
-    height: 3.25rem;
-    padding: 0 1.3rem;
-    margin-left: 5rem;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-    transition: box-shadow 0.25s ease, border-color 0.25s ease;
-  }
+.tax-toggle:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border-color: #fe424d;
+}
 
-  .tax-toggle:hover {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    border-color: #fe424d;
-  }
+.tax-toggle .form-check-label {
+  font-weight: 500;
+  color: #333;
+  font-size: 0.95rem;
+}
 
-  .tax-toggle .form-check-label {
-    font-weight: 500;
-    color: #333;
-    font-size: 0.95rem;
-  }
+.tax-toggle .form-check-input {
+  width: 2.6em;
+  height: 1.4em;
+  cursor: pointer;
+}
 
-  .tax-toggle .form-check-input {
-    width: 2.6em;
-    height: 1.4em;
-    cursor: pointer;
-  }
+.tax-toggle .form-check-input:checked {
+  background-color: #fe424d;
+  border-color: #fe424d;
+}
 
-  .tax-toggle .form-check-input:checked {
-    background-color: #fe424d;
-    border-color: #fe424d;
-  }
-
-  .tax-toggle .form-check-input:focus {
-    box-shadow: 0 0 0 3px rgba(254, 66, 77, 0.15);
-    border-color: #fe424d;
-  }
-  /* ===== END: Stylish Tax Toggle Section ===== */
+.tax-toggle .form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(254, 66, 77, 0.15);
+  border-color: #fe424d;
+}
+/* ===== END: Tax Toggle Section ===== */
 
 /* ---------- Listing Cards (index page) ---------- */
 .listing-card {
@@ -485,7 +475,6 @@ a, button, .btn {
   color: #222;
 }
 
-/* Edit / Delete buttons (show page action buttons + reused for edit-form submit) */
 .btns {
   display: flex;
   gap: 0.75rem;
@@ -606,7 +595,6 @@ a, button, .btn {
   width: 100% !important;
 }
 
-/* map popup styling */
 .mapboxgl-popup-content {
   padding: 12px 16px !important;
   border-radius: 8px !important;
@@ -641,7 +629,7 @@ a, button, .btn {
   cursor: pointer !important;
 }
 
-
+/* ---------- Auth Pages (login / signup) ---------- */
 .auth-wrapper {
   min-height: 70vh;
   display: flex;
@@ -706,7 +694,7 @@ a, button, .btn {
   text-decoration: underline;
 }
 
-
+/* ---------- Responsive: Tablet (max-width 991px) ---------- */
 @media (max-width: 991px) {
   .hero-banner {
     padding: 2rem 1.2rem;
@@ -736,6 +724,7 @@ a, button, .btn {
   }
 }
 
+/* ---------- Responsive: Mobile Navbar + Layout (max-width 767px) ---------- */
 @media (max-width: 767px) {
   .navbar-collapse {
     background-color: white;
@@ -781,21 +770,49 @@ a, button, .btn {
   }
 
   #filters {
+    flex-wrap: wrap !important;
     justify-content: flex-start;
   }
 
   .tax-toggle {
-    margin-left: 0;
+    margin-left: 0 !important;
     margin-top: 1rem;
     width: 100%;
+    height: auto;
+    padding: 0.8rem 1.2rem;
     justify-content: flex-start;
+    flex-shrink: 0;
   }
+
+  /* ===== FIXED: Toggle switch overlapping label text on mobile (19 July 2026) ===== */
+  .tax-toggle .form-check-reverse {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    width: 100%;
+  }
+
+  .tax-toggle .form-check-input {
+    position: static !important;
+    margin: 0 !important;
+    flex-shrink: 0;
+  }
+
+  .tax-toggle .form-check-label {
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap;
+    font-size: 0.85rem;
+  }
+  /* ===== END: Toggle switch fix ===== */
 
   .row.row-cols-lg-3.row-cols-md-2.row-cols-sm-1 {
     margin-top: 1rem !important;
   }
 }
 
+/* ---------- Responsive: Mobile (max-width 576px) ---------- */
 @media (max-width: 576px) {
   .navbar-brand {
     margin-right: 0.5rem;
