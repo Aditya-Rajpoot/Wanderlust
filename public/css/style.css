@@ -261,7 +261,7 @@ a, button, .btn {
   display: none;
 }
 
-.tax-toggle {
+/* .tax-toggle {
   border: 1px solid black;
   border-radius: 1rem;
   height: 3.25rem;
@@ -269,7 +269,49 @@ a, button, .btn {
   margin-left: 5rem;
   display: flex;
   align-items: center;
-}
+} */
+
+/* ===== UPDATED: Stylish Tax Toggle Section (19 July 2026) ===== */
+  .tax-toggle {
+    border: 1px solid #eee;
+    border-radius: 2rem;
+    height: 3.25rem;
+    padding: 0 1.3rem;
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .tax-toggle:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border-color: #fe424d;
+  }
+
+  .tax-toggle .form-check-label {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+  .tax-toggle .form-check-input {
+    width: 2.6em;
+    height: 1.4em;
+    cursor: pointer;
+  }
+
+  .tax-toggle .form-check-input:checked {
+    background-color: #fe424d;
+    border-color: #fe424d;
+  }
+
+  .tax-toggle .form-check-input:focus {
+    box-shadow: 0 0 0 3px rgba(254, 66, 77, 0.15);
+    border-color: #fe424d;
+  }
+  /* ===== END: Stylish Tax Toggle Section ===== */
 
 /* ---------- Listing Cards (index page) ---------- */
 .listing-card {
