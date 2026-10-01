@@ -2,7 +2,7 @@
 
 WanderLust is a full-stack **Airbnb-style travel listing platform** built with Node.js, Express, and MongoDB. Users can browse curated stays, create their own listings with images and map locations, leave star ratings and reviews, and manage their own properties — all wrapped in a clean, custom-styled, fully responsive UI.
 
-**🔗 Live Demo:** [wanderlust-ye90.onrender.com](https://wanderlust-ye90.onrender.com)
+**🔗 Live Demo:** [wanderlust-jcg7.onrender.com](https://wanderlust-jcg7.onrender.com/listings)
 
 ---
 
